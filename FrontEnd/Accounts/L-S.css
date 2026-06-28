@@ -1,0 +1,98 @@
+body.auth-page {
+  background: radial-gradient(
+    circle at 10% 10%,
+    #f5fff7 0%,
+    #ecf6ff 45%,
+    #eefbf1 100%
+  );
+  color: #173024;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(33, 79, 49, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(35, 78, 52, 0.1);
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.auth-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-text {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #214f31;
+}
+
+/* Custom Input Styling */
+.auth-input {
+  border-radius: 12px;
+  border: 1px solid #ced4da;
+  padding: 0.7rem 1rem;
+  background-color: #fcfcfc;
+  transition: all 0.2s ease-in-out;
+}
+
+.auth-input:focus {
+  background-color: #ffffff;
+  border-color: #36a454;
+  box-shadow: 0 0 0 0.25rem rgba(54, 164, 84, 0.15);
+}
+
+/* Button Styling */
+.btn-success {
+  background: linear-gradient(135deg, #2f8c48 0%, #36a454 100%);
+  border-color: #2f8c48;
+  border-radius: 12px; /* Slightly squarer than the landing page pills for forms */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background: linear-gradient(135deg, #26743b 0%, #2f8c48 100%);
+  border-color: #26743b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(47, 140, 72, 0.3) !important;
+}
+
+.text-success {
+  color: #2f8c48 !important;
+}
+
+.text-success:hover {
+  color: #1e5a2e !important;
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeInDown 0.6s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+}
