@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (isValid) {
           // Here you would typically send data to your backend
+          window.location.replace = "FrontEnd/Home/home.html";
           console.log("Signup form is valid. Proceeding with registration...");
           alert("Signup successful! (Placeholder action)");
         }
@@ -67,7 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           // Here you would typically send data to your backend
           console.log("Login form is valid. Proceeding with authentication...");
-          alert("Login successful! (Placeholder action)");
+          alert("Login successful! ..");
+          window.location.href = "../Home/home.html";
         }
 
         loginForm.classList.add("was-validated");

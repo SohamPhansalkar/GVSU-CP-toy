@@ -1,0 +1,127 @@
+/* Base Styles */
+body.game-page {
+  background: radial-gradient(
+    circle at 10% 10%,
+    #f5fff7 0%,
+    #ecf6ff 45%,
+    #eefbf1 100%
+  );
+  color: #173024;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.nav-professional {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(23, 48, 36, 0.08);
+}
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+}
+.brand-symbol {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+.brand-text {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: 1.25rem;
+  color: #214f31;
+}
+.user-greeting {
+  background-color: rgba(47, 140, 72, 0.1);
+  color: #2f8c48;
+  border: 1px solid rgba(47, 140, 72, 0.2);
+}
+
+/* Game Container & Card */
+.game-container {
+  padding-top: 7rem;
+  flex: 1;
+}
+
+.quiz-card {
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  border: 1px solid rgba(33, 79, 49, 0.12);
+  box-shadow: 0 15px 40px rgba(35, 78, 52, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+/* Image styling */
+.image-wrapper {
+  width: 100%;
+  height: 250px;
+  background-color: #eef3f0;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.animal-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the space neatly without stretching */
+}
+
+/* Options Grid Buttons */
+.option-btn {
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  color: #355645;
+  border-radius: 16px;
+  transition: all 0.2s ease-in-out;
+}
+
+.option-btn:hover:not(:disabled) {
+  background-color: #eefbf1;
+  border-color: #36a454;
+  color: #1e5a2e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(54, 164, 84, 0.15);
+}
+
+/* Validation Colors (Applied via JS) */
+.option-btn.correct {
+  background-color: #d1e7dd !important;
+  border-color: #198754 !important;
+  color: #0f5132 !important;
+}
+
+.option-btn.incorrect {
+  background-color: #f8d7da !important;
+  border-color: #dc3545 !important;
+  color: #842029 !important;
+}
+
+/* Footer */
+.footer {
+  background: rgba(255, 255, 255, 0.6);
+  border-top: 1px solid rgba(23, 48, 36, 0.08);
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
