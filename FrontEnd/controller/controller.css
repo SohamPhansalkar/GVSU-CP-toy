@@ -1,0 +1,89 @@
+body.controller-body {
+  margin: 0;
+  padding: 0;
+  background: #173024;
+  font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: none;
+}
+
+.controller-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.back-link {
+  color: #a8d5ba;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-indicator {
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.controller-container {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 15px;
+  align-items: stretch;
+}
+
+.ctrl-btn {
+  border: none;
+  border-radius: 24px;
+  font-weight: 900;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  letter-spacing: 2px;
+  color: #ffffff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.1s ease,
+    background 0.2s ease,
+    box-shadow 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ctrl-btn:active,
+.ctrl-btn.active-touch {
+  transform: scale(0.95) translateY(5px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.btn-side {
+  flex: 1;
+  background: linear-gradient(135deg, #2f8c48 0%, #216b35 100%);
+  border: 2px solid #36a454;
+}
+
+.btn-center {
+  flex: 1.2;
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+  border: 2px solid #3b82f6;
+}
+
+@media screen and (orientation: landscape) {
+  .controller-container {
+    padding: 20px 40px;
+    gap: 30px;
+  }
+}
