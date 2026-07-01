@@ -27,9 +27,10 @@ buzzer = board.get_pin('d:13:o')
 
 def beep():
     buzzer.write(1)  
-    time.sleep(2)   
+    time.sleep(0.5)   
     buzzer.write(0) 
-
+    time.sleep(0.5)
+    
 def send_api_request(action_code):
     """Sends the HTTP POST request to the FastAPI backend."""
     payload = {
@@ -49,18 +50,22 @@ def on_right_btn_changed(value):
         print("Right button clicked -> Sending 'R'")
         threading.Thread(target=beep).start()
         threading.Thread(target=send_api_request, args=("R",)).start()
+        beep()
 
 def on_select_btn_changed(value):
     if value == 0.0:
         print("Select button clicked -> Sending 'SEL'")
         threading.Thread(target=beep).start()
         threading.Thread(target=send_api_request, args=("SEL",)).start()
+        beep()
+        beep()
 
 def on_left_btn_changed(value):
     if value == 0.0:
         print("Left button clicked -> Sending 'L'")
         threading.Thread(target=beep).start()
         threading.Thread(target=send_api_request, args=("L",)).start()
+        beep()
 
 # Register callbacks
 btn_right.register_callback(on_right_btn_changed)
